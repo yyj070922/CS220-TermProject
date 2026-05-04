@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,9 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Types.fs" />
+    <Compile Include="Piece.fs" />
+    <Compile Include="GameOption.fs" />
+    <Compile Include="SlotState.fs" />
+    <Compile Include="BoardHelper.fs" />
     <Compile Include="Board.fs" />
-    <Compile Include="Rules.fs" />
+    <Compile Include="Behavior.fs" />
     <Compile Include="AI.fs" />
     <Compile Include="Game.fs" />
     <Compile Include="Program.fs" />

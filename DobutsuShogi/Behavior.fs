@@ -1,3 +1,0 @@
-module Dobutsu.Behavior
-
-let 

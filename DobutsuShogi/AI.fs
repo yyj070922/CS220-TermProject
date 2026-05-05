@@ -41,6 +41,7 @@ module AI =
     then None 
     else
       moves
+      |> List.sortBy (fun _ -> System.Random().Next())
       |> List.maxBy (fun myMove ->
         let afterMyMove = applyMove board myMove
         if Board.checkWin ai afterMyMove then
@@ -56,3 +57,4 @@ module AI =
               evaluate ai afterEnemyMove)
             |> List.min)
       |> Some
+

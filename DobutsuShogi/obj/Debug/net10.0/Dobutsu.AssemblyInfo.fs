@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("Dobutsu")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cdf46801e132fc56244d0bf616e46f87db8cecc")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45357c8d113c8e0a8b43dc89634df3e41434f9a1")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("Dobutsu")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("Dobutsu")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

@@ -24,6 +24,10 @@ module Piece =
       | Chick -> "C"
       | Hen -> "H"
     rb + pK
+  
+  let getOpponent = function
+  | Red -> Blue
+  | Blue -> Red
 
 
 

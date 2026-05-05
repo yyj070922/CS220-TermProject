@@ -22,7 +22,7 @@ module Board =
       | Dropped m -> b.[i] <- Dropped m 
       | _ -> ()
     board.Board |> Array.iteri update
-    { Board = b; Hand = Map.ofList [ Red, []; Blue, [] ]; Turn = board.Turn }
+    { Board = b; Hand = board.Hand |> Map.map (fun _ lst -> List.map id lst); Turn = board.Turn }
 
   let PrintBoard board =
     let s1 = SlotState.toString board.Board.[0]
@@ -72,15 +72,18 @@ module Board =
       | Empty ->
         let newArr = Array.copy board.Board
         newArr.[n1 - 1] <- Empty
-        newArr.[n2 - 1] <- p
+        match p with
+        | Dropped { Owner = owner; Kind = Chick} -> newArr.[n2 - 1] <- Dropped { Owner = owner; Kind = Hen }
+        | _ -> newArr.[n2 - 1] <- p
         { board with Board = newArr }, true
       | Dropped { Owner = o2; Kind = k2 }
         when o2 <> board.Turn ->
         let newArr = Array.copy board.Board
         let captured = BoardHelper.demote k2
         let hand = Map.find o1 board.Hand
-        newArr.[n1 - 1] <- Empty
-        newArr.[n2 - 1] <- p
+        match p with
+        | Dropped { Owner = owner; Kind = Chick} -> newArr.[n2 - 1] <- Dropped { Owner = owner; Kind = Hen }
+        | _ -> newArr.[n2 - 1] <- p
         { board with Board = newArr; Hand = Map.add o1 (captured :: hand) board.Hand }, true
       | _ -> board, false
     | _ -> board, false
@@ -90,5 +93,7 @@ module Board =
 
   let Clear board num = board.Board.[num - 1] <- Empty
   
-  let CheckWinner board: Player option =
-    BoardHelper.checkWinner board.Board
+  let CheckWin player board=
+    if BoardHelper.checkWinner board.Board = Some player 
+    then true 
+    else false

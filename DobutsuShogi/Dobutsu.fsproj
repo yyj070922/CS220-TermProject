@@ -11,8 +11,9 @@
     <Compile Include="SlotState.fs" />
     <Compile Include="BoardHelper.fs" />
     <Compile Include="Board.fs" />
+    <Compile Include="GameRules.fs" />
     <Compile Include="AI.fs" />
-    <Compile Include="Game.fs" />
+    <Compile Include="GameInterface.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

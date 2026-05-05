@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KOMum1zCfU4=",
+  "dgSpecHash": "ThO5vluTPKU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\yjy07\\CS220\\CS220-TermProject\\DobutsuShogi\\DobutsuShogi.fsproj",
+  "projectFilePath": "C:\\Users\\yjy07\\CS220\\CS220-TermProject\\DobutsuShogi\\Dobutsu.fsproj",
   "expectedPackageFiles": [
     "C:\\Users\\yjy07\\.nuget\\packages\\fsharp.core\\10.0.107\\fsharp.core.10.0.107.nupkg.sha512"
   ],

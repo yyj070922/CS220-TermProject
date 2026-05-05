@@ -7,4 +7,4 @@ type SlotState =
 module SlotState = 
   let toString = function
     | Empty -> "  "
-    | Dropped p -> Piece.toStrng p
+    | Dropped p -> Piece.toString p

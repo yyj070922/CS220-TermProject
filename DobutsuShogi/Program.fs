@@ -1,3 +1,6 @@
-﻿namespace Dobutsu
+﻿module Dobutsu.Program
 
-printfn "Hello from F#"
+  [<EntryPoint>]
+  let main argv =
+    GameInterface.start()
+    0

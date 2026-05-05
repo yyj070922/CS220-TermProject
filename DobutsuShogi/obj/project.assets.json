@@ -113,9 +113,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yjy07\\CS220\\CS220-TermProject\\DobutsuShogi\\DobutsuShogi.fsproj",
-      "projectName": "DobutsuShogi",
-      "projectPath": "C:\\Users\\yjy07\\CS220\\CS220-TermProject\\DobutsuShogi\\DobutsuShogi.fsproj",
+      "projectUniqueName": "C:\\Users\\yjy07\\CS220\\CS220-TermProject\\DobutsuShogi\\Dobutsu.fsproj",
+      "projectName": "Dobutsu",
+      "projectPath": "C:\\Users\\yjy07\\CS220\\CS220-TermProject\\DobutsuShogi\\Dobutsu.fsproj",
       "packagesPath": "C:\\Users\\yjy07\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\yjy07\\CS220\\CS220-TermProject\\DobutsuShogi\\obj\\",
       "projectStyle": "PackageReference",

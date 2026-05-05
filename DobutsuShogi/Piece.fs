@@ -10,7 +10,7 @@ type Piece = {
 }
 
 module Piece = 
-  let toStrng (p: Piece) =
+  let toString (p: Piece) =
     let rb = 
       match p.Owner with
       | Red -> "r"
@@ -25,6 +25,16 @@ module Piece =
       | Hen -> "H"
     rb + pK
   
+  let toStringK (p: PieceK) =
+    let pK = 
+      match p with
+      | Lion -> "L"
+      | Giraffe -> "G"
+      | Elephant -> "E"
+      | Chick -> "C"
+      | Hen -> "H"
+    pK
+
   let getOpponent = function
   | Red -> Blue
   | Blue -> Red

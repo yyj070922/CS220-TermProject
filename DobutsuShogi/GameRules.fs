@@ -39,4 +39,4 @@ module Rules =
       match move with
       | Move (a, b) -> Board.move copied a b
       | Drop (pos, k) -> Board.drop copied pos k
-    { newBoard with Turn = Piece.getOpponent newBoard.Turn}
+    { newBoard with Turn = Piece.getOpponent newBoard.Turn }

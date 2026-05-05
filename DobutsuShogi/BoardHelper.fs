@@ -1,14 +1,5 @@
 module Dobutsu.BoardHelper
 
-let checkWinner states =
-  let rLion = Dropped { Owner = Red; Kind = Lion }
-  let bLion = Dropped { Owner = Blue; Kind = Lion }
-  if Array.contains rLion states = false
-  then Some Red
-  elif Array.contains bLion states = false
-  then Some Blue
-  else None
-
 let toCoord n =
   let i = n - 1
   i / 3, i % 3   // row, col

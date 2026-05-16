@@ -134,7 +134,7 @@ Dobutsu Shogi
 2. AI First
 3. Two Players
 4. Exit
-> 1
+1
 
 Turn: RED 🔴
 
@@ -149,10 +149,8 @@ Turn: RED 🔴
 +---+---+---+
 
 ---------------------------------------------------
-Enter Behavior(Move|Drop):
-> Move
-Enter FromPos(1~12) & ToPos(1~12): _ _
-> 8 5
+Enter Behavior(Move|Drop): Move
+Enter FromPos(1~12) & ToPos(1~12): _ _ 8 5
 
 
 Turn: BLUE 🔵

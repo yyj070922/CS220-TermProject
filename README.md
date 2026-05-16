@@ -129,7 +129,7 @@ Depending on the selected game option, the gameplay proceeds as follows.
 
 ## Example Session
 
-'''text
+```text
 Dobutsu Shogi
 1. Player First
 2. AI First
@@ -150,8 +150,7 @@ Turn: RED 🔴
 +---+---+---+
 
 Enter Behavior(Move|Drop): Move
-Enter FromPos(1\~12) & ToPos(1\~12): _ _ 8 5
-
+Enter FromPos(1~12) & ToPos(1~12): _ _ 8 5
 
 Turn: BLUE 🔵
 
@@ -167,7 +166,7 @@ Turn: BLUE 🔵
 
 AI is thinking...
 ...
-'''
+```
 
 ## Project Structure
 '''

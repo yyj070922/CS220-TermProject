@@ -79,13 +79,13 @@ Dobutsu Shogi
 2. The current Dobutsu Shogi board is printed.
 3. You are prompted: `Enter Behavior(Move|Drop):`
 4. Type either `Move` or `Drop` and press **Enter**.
-5. If you choose `Move`:
+5. If you choose `Move`(or "M" | "m" | "move"):
    - You are prompted: `Enter FromPos(1~12) & ToPos(1~12): _ _`
    - Enter the source position and destination position.
    - If the positions are invalid, you are asked to try again.
    - If the selected piece does not belong to you, you are asked to try again.
    - If the move is illegal for that piece, you are asked to try again.
-8. If you choose `Drop`:
+8. If you choose `Drop`(or | "D" | "d" | "drop"):
    - You are prompted: `Enter DropPos(1~12) & Piece(G|E|C): _ _`
    - Enter the piece from your hand and the target position.
    - If the piece is not in your hand, you are asked to try again.

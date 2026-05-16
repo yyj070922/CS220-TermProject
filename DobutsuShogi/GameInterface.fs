@@ -113,7 +113,7 @@ module GameInterface =
       Console.Clear()
       printBoard board
       handleInput board 1 "Enter FromPos(1~12) & ToPos(1~12): _ _"
-    | "Drop" | "D" | "d" | "move" -> 
+    | "Drop" | "D" | "d" | "drop" -> 
       Console.Clear()
       printBoard board
       handleInput board 2 "Enter DropPos(1~12) & Piece(G|E|C): _ _"

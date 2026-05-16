@@ -69,13 +69,13 @@ Empty spaces are shown as blank cells, and each side’s captured pieces are dis
 ## Game Flow
 
 1. The following prompt is displayed, and the user can select a game option by entering a number.
-'''
+```
 Dobutsu Shogi
 1. Player First
 2. AI First
 3. Two Players
 4. Exit
-'''
+```
 2. The current Dobutsu Shogi board is printed.
 3. You are prompted: `Enter Behavior(Move|Drop):`
 4. Type either `Move` or `Drop` and press **Enter**.
@@ -129,7 +129,7 @@ Depending on the selected game option, the gameplay proceeds as follows.
 
 ## Example Session
 
-```text
+```
 Dobutsu Shogi
 1. Player First
 2. AI First
@@ -169,7 +169,7 @@ AI is thinking...
 ```
 
 ## Project Structure
-'''
+```
 CS220-TermProject/
 ├── README.me
 ├── requirements.md
@@ -183,10 +183,10 @@ CS220-TermProject/
     ├── AI.fs               # AI logic
     ├── GameInterface.fs    # Rendering, Player input validation, Gameloop
     └── Program.fs          # Entrypoint
-'''
+```
 
 ### Key Types
-'''
+```
 // Piece type represents a game piece with its owner (`Red` or `Blue`) and kind (`Lion`, `Giraffe`, `Elephant`, `Chick`, or `Hen`).
 type Piece = {
   Owner: Player
@@ -198,7 +198,7 @@ type BoardState = {
   Hand: Hand
   Turn: Player
 }
-'''
+```
 ## LLM Part
 - 기물 이동 가능 여부 코드 판단
 - Move, Drop 버그 고치기

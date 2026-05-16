@@ -1,7 +1,7 @@
 # CS220-TermProject
 A command-line Dobutsu Shogi built with **F# / .NET 10**.
 
-You play as **RED** against a AI enemy **BLUE**. Enter a command(Move/Drop) to decide own behavior.
+You play as **RED** against a AI enemy, **BLUE**. Enter a command(Move/Drop) to choose your action.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ You play as **RED** against a AI enemy **BLUE**. Enter a command(Move/Drop) to d
 ### Run
 
 ```bash
-# Windows
+# Windows PowerShell
 run.bat
 
 # Unix / macOS
@@ -116,7 +116,7 @@ Dobutsu Shogi
 
 Depending on the selected game option, the gameplay proceeds as follows.
   - Player First: The player moves first, and the AI takes the enemy turn.
-  - AI First: The AI moves first, and the player takes the enemy turn.
+  - AI First: The AI moves first, and the player moves after the AI turn
   - Two Players: Two players take turns controlling Red and Blue alternately.
 
 ### Winning & Ending
@@ -171,7 +171,7 @@ AI is thinking...
 ## Project Structure
 ```
 CS220-TermProject/
-├── README.me
+├── README.md
 ├── requirements.md
 ├── run.bat                 # Windows run script
 ├── run.sh                  # Unix run script
@@ -222,7 +222,7 @@ type BoardState = {
   - moving their Lion safely to the opponent’s end row without being capturable on the next turn.
 - The game can be terminated at any time by entering `exit`.
 
-## LLM Part
+## LLM Usage
 - 기물 이동 가능 여부 코드 판단
 - Move, Drop 버그 고치기
 - 텍스트 색깔 입히기

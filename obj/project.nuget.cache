@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9Xd4Kgc8F/I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yjy07\\CS220\\CS220-TermProject\\Dobutsu.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yjy07\\.nuget\\packages\\fsharp.core\\10.0.108\\fsharp.core.10.0.108.nupkg.sha512"
+  ],
+  "logs": []
+}

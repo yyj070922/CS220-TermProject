@@ -1,3 +1,3 @@
 @echo off
-dotnet run --project Dobutsu.fsproj
+dotnet run
 pause

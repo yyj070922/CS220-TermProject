@@ -97,6 +97,21 @@ Dobutsu Shogi
     - a player captures the opponent’s Lion, or
     - a player moves their Lion to the opposite end of the board without risk of being captured.
 
+### Piece Movement
+
+| Piece | Movement |
+|--------|-----------|
+| **Lion (L)** | Moves 1 square in any direction |
+| **Giraffe (G)** | Moves 1 square vertically or horizontally |
+| **Elephant (E)** | Moves 1 square diagonally |
+| **Chick (C)** | Moves 1 square forward |
+| **Hen (H)** | Moves 1 square in any direction except diagonally backward |
+
+### Promotion
+
+- When a **Chick (C)** reaches the opponent's end row, it is automatically promoted to a **Hen (H)**.
+- A promoted **Hen (H)** returns to a normal **Chick (C)** when captured by the opponent.
+
 ### Gamemode
 
 Depending on the selected game mode, the gameplay proceeds as follows.
@@ -108,11 +123,9 @@ Depending on the selected game mode, the gameplay proceeds as follows.
 
 | Result | Condition |
 |--------|-----------|
-| **You win** | Three `O`s in a row, column, or diagonal |
-| **Enemy wins** | Three `X`s in a row, column, or diagonal |
-| **Tie** | All 9 squares filled with no winner |
-
-After the game ends, you are asked whether to play again.
+| **Red wins** | The opponent's Lion is captured, or Red's Lion safely reaches the enemy side |
+| **Blue wins** | The opponent's Lion is captured, or Blue's Lion safely reaches the enemy side |
+| **Game terminated** | A player enters `exit` during the game |
 
 ## LLM Part
 - 기물 이동 가능 여부 코드 판단

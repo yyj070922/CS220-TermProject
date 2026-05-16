@@ -68,31 +68,41 @@ Empty spaces are shown as blank cells, and each side’s captured pieces are dis
 
 ## Game Flow
 
-1. The current Dobutsu Shogi board is printed.
-2. You are prompted: `Enter Behavior(Move|Drop):`
-3. Type either `Move` or `Drop` and press **Enter**.
-4. If you choose `Move`:
+1. The following prompt is displayed, and the user can select a game mode by entering a number.
+'''
+Dobutsu Shogi
+1. Player First
+2. AI First
+3. Two Players
+4. Exit
+'''
+2. The current Dobutsu Shogi board is printed.
+3. You are prompted: `Enter Behavior(Move|Drop):`
+4. Type either `Move` or `Drop` and press **Enter**.
+5. If you choose `Move`:
    - You are prompted: `Enter FromPos(1~12) & ToPos(1~12): _ _`
    - Enter the source position and destination position.
    - If the positions are invalid, you are asked to try again.
    - If the selected piece does not belong to you, you are asked to try again.
    - If the move is illegal for that piece, you are asked to try again.
-5. If you choose `Drop`:
+8. If you choose `Drop`:
    - You are prompted: `Enter DropPos(1~12) & Piece(G|E|C): _ _`
    - Enter the piece from your hand and the target position.
    - If the piece is not in your hand, you are asked to try again.
    - If the target square is already occupied, you are asked to try again.
-6. If the action is valid, the board is updated.
-7. Captured pieces are added to the current player’s hand.
-8. The turn changes to the other player.
-9. The game ends when:
+9. If the action is valid, the board is updated.
+10. Captured pieces are added to the current player’s hand.
+11. The turn changes to the other player.
+12. The game ends when:
    - a player captures the opponent’s Lion, or
-   - a player moves their Lion to the opposite end of the board.
+   - a player moves their Lion to the opposite end of the board without risk of being captured.
 
-### Enemy Turn
+### Gamemode
 
-After your move, the enemy automatically picks a random empty square and places `X`.
-The chosen square number is printed so you can follow along.
+Depending on the selected game mode, the gameplay proceeds as follows.
+  - Player First: The player moves first, and the AI takes the enemy turn.
+  - AI First: The AI moves first, and the player takes the enemy turn.
+  - Two Players: Two players take turns controlling Red and Blue alternately.
 
 ### Winning & Ending
 

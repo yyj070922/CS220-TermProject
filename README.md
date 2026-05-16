@@ -173,6 +173,9 @@ AI is thinking...
 CS220-TermProject/
 ├── README.me
 ├── requirements.md
+├── run.bat                 # Windows run script
+├── run.sh                  # Unix run script
+├── Dobutsu.fsproj          # .NET 10 F# project file
 └── DobutsuShogi
     ├── Piece.fs            # Piece & PieceK & Player Type
     ├── GameOption.fs       # GameOption Type

@@ -6,15 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Piece.fs" />
-    <Compile Include="GameOption.fs" />
-    <Compile Include="SlotState.fs" />
-    <Compile Include="BoardHelper.fs" />
-    <Compile Include="Board.fs" />
-    <Compile Include="GameRules.fs" />
-    <Compile Include="AI.fs" />
-    <Compile Include="GameInterface.fs" />
-    <Compile Include="Program.fs" />
+    <Compile Include="DobutsuShogi\Piece.fs" />
+    <Compile Include="DobutsuShogi\GameOption.fs" />
+    <Compile Include="DobutsuShogi\SlotState.fs" />
+    <Compile Include="DobutsuShogi\BoardHelper.fs" />
+    <Compile Include="DobutsuShogi\Board.fs" />
+    <Compile Include="DobutsuShogi\GameRules.fs" />
+    <Compile Include="DobutsuShogi\AI.fs" />
+    <Compile Include="DobutsuShogi\GameInterface.fs" />
+    <Compile Include="DobutsuShogi\Program.fs" />
   </ItemGroup>
 
 </Project>

@@ -128,7 +128,8 @@ Depending on the selected game option, the gameplay proceeds as follows.
 | **Game terminated** | A player enters `exit` during the game |
 
 ## Example Session
-'''
+
+'''text
 Dobutsu Shogi
 1. Player First
 2. AI First

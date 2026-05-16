@@ -94,8 +94,8 @@ Dobutsu Shogi
 10. Captured pieces are added to the current player’s hand.
 11. The turn changes to the other player.
 12. The game ends when:
-   - a player captures the opponent’s Lion, or
-   - a player moves their Lion to the opposite end of the board without risk of being captured.
+    - a player captures the opponent’s Lion, or
+    - a player moves their Lion to the opposite end of the board without risk of being captured.
 
 ### Gamemode
 

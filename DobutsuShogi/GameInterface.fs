@@ -127,11 +127,11 @@ module GameInterface =
     Console.Clear()
     printBoard board
 
-    if Board.checkWin human board then
+    if checkWin human board then
       printfn  "               =====================
               \n                    🎉 WIN! 🎉
               \n               ====================="
-    elif Board.checkWin ai board then
+    elif checkWin ai board then
       printfn  "               =====================
               \n                   😭 LOSE.. 😭
               \n               ====================="
@@ -164,11 +164,11 @@ module GameInterface =
     Console.Clear()
     printBoard board
 
-    if Board.checkWin Red board then
+    if checkWin Red board then
       printfn  "               =======================
               \n                   🎉 Red WIN! 🎉
               \n               =======================" 
-    elif Board.checkWin Blue board then
+    elif checkWin Blue board then
       printfn  "               ========================
               \n                   🎉 Blue WIN! 🎉
               \n               ========================" 

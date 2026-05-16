@@ -8,17 +8,17 @@
     ".NETCoreApp,Version=v10.0": {
       "Dobutsu/1.0.0": {
         "dependencies": {
-          "FSharp.Core": "10.0.107"
+          "FSharp.Core": "10.0.108"
         },
         "runtime": {
           "Dobutsu.dll": {}
         }
       },
-      "FSharp.Core/10.0.107": {
+      "FSharp.Core/10.0.108": {
         "runtime": {
           "lib/netstandard2.1/FSharp.Core.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.1.726.21808"
+            "fileVersion": "10.1.826.23019"
           }
         },
         "resources": {
@@ -71,12 +71,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "FSharp.Core/10.0.107": {
+    "FSharp.Core/10.0.108": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZZaXbkyQ8GvAPyoUSefdLUxX8pUTKlKu9cmtKlQWv7SidzfwOQSMpoFNQ4w+dnZ8wFLoJJXLs+zb7ph+xP46gQ==",
-      "path": "fsharp.core/10.0.107",
-      "hashPath": "fsharp.core.10.0.107.nupkg.sha512"
+      "sha512": "sha512-NWqypMxi+tQ0RAG8qswsE9DM9ytotdq2t+fx8wGNvrawGpjgDnmdhBuh0MbrHYTYpZ2Z9gz9fV33bSbfZcVujg==",
+      "path": "fsharp.core/10.0.108",
+      "hashPath": "fsharp.core.10.0.108.nupkg.sha512"
     }
   }
 }

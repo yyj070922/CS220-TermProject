@@ -40,3 +40,38 @@ module Rules =
       | Move (a, b) -> Board.move copied a b
       | Drop (pos, k) -> Board.drop copied pos k
     { newBoard with Turn = Piece.getOpponent newBoard.Turn }
+
+  let lionGoalPos player =
+    match player with
+    | Red -> [1; 2; 3]
+    | Blue -> [10; 11; 12]
+  
+  let findLionPos player board =
+    board.Board
+    |> Array.mapi (fun i slot -> i + 1, slot)
+    |> Array.tryPick (fun (pos, slot) ->
+      match slot with
+      | Dropped { Owner = owner; Kind = Lion } when owner = player -> Some pos
+      | _ -> None)
+  
+  let canAttackPos attacker targetPos board =
+    board.Board
+    |> Array.mapi (fun i slot -> i + 1, slot)
+    |> Array.exists (fun (fromPos, slot) ->
+      match slot with
+      | Dropped { Owner = owner; Kind = kind } when owner = attacker ->
+        BoardHelper.canReach owner kind fromPos targetPos
+      | _ -> false)
+  
+  let lionReachedGoalSafely player board =
+    match findLionPos player board with
+    | None -> false
+    | Some lionPos ->
+      let enemy = Piece.getOpponent player
+      List.contains lionPos (lionGoalPos player)
+      && not (canAttackPos enemy lionPos board)
+
+  let checkWin player board=
+    if List.contains Lion (Map.find player board.Hand) || lionReachedGoalSafely player board
+    then true 
+    else false

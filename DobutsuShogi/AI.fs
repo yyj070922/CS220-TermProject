@@ -29,9 +29,9 @@ module AI =
         if player = ai then s else -s))
 
   let evaluate ai board =
-    if Board.checkWin ai board
+    if checkWin ai board
     then 1000
-    elif Board.checkWin (Piece.getOpponent ai) board
+    elif checkWin (Piece.getOpponent ai) board
     then -1000
     else boardScore ai board + handScore ai board
   
@@ -44,7 +44,7 @@ module AI =
       |> List.sortBy (fun _ -> System.Random().Next())
       |> List.maxBy (fun myMove ->
         let afterMyMove = applyMove board myMove
-        if Board.checkWin ai afterMyMove then
+        if checkWin ai afterMyMove then
           1000
         else
           let enemyMoves = legalMoves afterMyMove

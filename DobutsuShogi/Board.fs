@@ -91,7 +91,3 @@ module Board =
 
   let clear board num = board.Board.[num - 1] <- Empty
   
-  let checkWin player board=
-    if List.contains Lion (Map.find player board.Hand)
-    then true 
-    else false

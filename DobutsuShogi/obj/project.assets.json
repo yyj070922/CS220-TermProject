@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net10.0": {
-      "FSharp.Core/10.0.107": {
+      "FSharp.Core/10.0.108": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/FSharp.Core.dll": {
@@ -59,15 +59,15 @@
     }
   },
   "libraries": {
-    "FSharp.Core/10.0.107": {
-      "sha512": "ZZaXbkyQ8GvAPyoUSefdLUxX8pUTKlKu9cmtKlQWv7SidzfwOQSMpoFNQ4w+dnZ8wFLoJJXLs+zb7ph+xP46gQ==",
+    "FSharp.Core/10.0.108": {
+      "sha512": "NWqypMxi+tQ0RAG8qswsE9DM9ytotdq2t+fx8wGNvrawGpjgDnmdhBuh0MbrHYTYpZ2Z9gz9fV33bSbfZcVujg==",
       "type": "package",
-      "path": "fsharp.core/10.0.107",
+      "path": "fsharp.core/10.0.108",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "fsharp.core.10.0.107.nupkg.sha512",
+        "fsharp.core.10.0.108.nupkg.sha512",
         "fsharp.core.nuspec",
         "lib/netstandard2.0/FSharp.Core.dll",
         "lib/netstandard2.0/FSharp.Core.xml",
@@ -104,7 +104,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "FSharp.Core >= 10.0.107"
+      "FSharp.Core >= 10.0.108"
     ]
   },
   "packageFolders": {
@@ -126,7 +126,7 @@
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\sdk\\10.0.107\\FSharp\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\10.0.108\\FSharp\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -149,7 +149,7 @@
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[10.0.107, )",
+            "version": "[10.0.108, )",
             "generatePathProperty": true
           }
         },
@@ -169,7 +169,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.107/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.108/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

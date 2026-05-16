@@ -68,14 +68,14 @@ Empty spaces are shown as blank cells, and each side’s captured pieces are dis
 
 ## Game Flow
 
-1. The following prompt is displayed, and the user can select a game mode by entering a number.
-'''
+1. The following prompt is displayed, and the user can select a game option by entering a number.
+```
 Dobutsu Shogi
 1. Player First
 2. AI First
 3. Two Players
 4. Exit
-'''
+```
 2. The current Dobutsu Shogi board is printed.
 3. You are prompted: `Enter Behavior(Move|Drop):`
 4. Type either `Move` or `Drop` and press **Enter**.
@@ -112,9 +112,9 @@ Dobutsu Shogi
 - When a **Chick (C)** reaches the opponent's end row, it is automatically promoted to a **Hen (H)**.
 - A promoted **Hen (H)** returns to a normal **Chick (C)** when captured by the opponent.
 
-### Gamemode
+### GameOption
 
-Depending on the selected game mode, the gameplay proceeds as follows.
+Depending on the selected game option, the gameplay proceeds as follows.
   - Player First: The player moves first, and the AI takes the enemy turn.
   - AI First: The AI moves first, and the player takes the enemy turn.
   - Two Players: Two players take turns controlling Red and Blue alternately.
@@ -127,6 +127,78 @@ Depending on the selected game mode, the gameplay proceeds as follows.
 | **Blue wins** | The opponent's Lion is captured, or Blue's Lion safely reaches the enemy side |
 | **Game terminated** | A player enters `exit` during the game |
 
+## Example Session
+
+```
+Dobutsu Shogi
+1. Player First
+2. AI First
+3. Two Players
+4. Exit
+1
+
+Turn: RED 🔴
+
++---+---+---+
+| G | L | E |   1   2   3            Blue hand
++---+---+---+
+|   | C |   |   4   5   6             []
++---+---+---+
+|   | C |   |   7   8   9             []
++---+---+---+
+| E | L | G |  10  11  12            Red hand
++---+---+---+
+
+Enter Behavior(Move|Drop): Move
+Enter FromPos(1~12) & ToPos(1~12): _ _ 8 5
+
+Turn: BLUE 🔵
+
++---+---+---+
+| G | L | E |   1   2   3            Blue hand
++---+---+---+
+|   | C |   |   4   5   6             []
++---+---+---+
+|   |   |   |   7   8   9             [C]
++---+---+---+
+| E | L | G |  10  11  12            Red hand
++---+---+---+
+
+AI is thinking...
+...
+```
+
+## Project Structure
+```
+CS220-TermProject/
+├── README.me
+├── requirements.md
+└── DobutsuShogi
+    ├── Piece.fs            # Piece & PieceK & Player Type
+    ├── GameOption.fs       # GameOption Type
+    ├── SlotState.fs        # SlotState Type
+    ├── BoardHelper.fs      # Piece move validation, Hand edit, Demote Hen
+    ├── Board.fs            # BoardState Type, Copy & Drop & Move & Promote action
+    ├── GameRules.fs        # Move&Drop validation, Win detection
+    ├── AI.fs               # AI logic
+    ├── GameInterface.fs    # Rendering, Player input validation, Gameloop
+    └── Program.fs          # Entrypoint
+```
+
+### Key Types
+```
+// Piece type represents a game piece with its owner (`Red` or `Blue`) and kind (`Lion`, `Giraffe`, `Elephant`, `Chick`, or `Hen`).
+type Piece = {
+  Owner: Player
+  Kind: PieceK
+}
+// BoardState type represents the current state of the game, including the board layout, players' hands, and the current turn.
+type BoardState = {
+  Board: SlotState array
+  Hand: Hand
+  Turn: Player
+}
+```
 ## LLM Part
 - 기물 이동 가능 여부 코드 판단
 - Move, Drop 버그 고치기

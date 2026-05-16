@@ -33,11 +33,6 @@ module Board =
         |> Map.add Blue []
       Turn = firstTurn
     }
-
-  let fold board folder acc = 
-    board.Board
-    |> Array.fold (fun (i, a) elt -> i + 1, folder i a elt) (1, acc)
-    |> snd
   
   let copy board =
     let b = Array.create 12 Empty
@@ -89,5 +84,4 @@ module Board =
       | _ -> board, false
     | _ -> board, false
 
-  let clear board num = board.Board.[num - 1] <- Empty
   

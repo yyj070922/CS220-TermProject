@@ -150,7 +150,7 @@ Turn: RED 🔴
 
 ---------------------------------------------------
 Enter Behavior(Move|Drop): Move
-Enter FromPos(1~12) & ToPos(1~12): _ _ 8 5
+Enter FromPos(1\~12) & ToPos(1\~12): _ _ 8 5
 
 
 Turn: BLUE 🔵

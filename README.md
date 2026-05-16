@@ -199,6 +199,26 @@ type BoardState = {
   Turn: Player
 }
 ```
+
+## Rules Summary
+
+- The game is played on a **3×4 board** between **Red** and **Blue**.
+- Each player controls:
+  - 1 Lion (L)
+  - 1 Giraffe (G)
+  - 1 Elephant (E)
+  - 1 Chick (C)
+- Players take turns choosing either:
+  - `Move` — move one of their own pieces
+  - `Drop` — place a captured piece from their hand onto an empty square
+- Captured pieces are added to the capturer’s hand and can later be dropped back onto the board.
+- A **Chick (C)** is automatically promoted to a **Hen (H)** when it reaches the opponent’s end row.
+- A captured **Hen (H)** is converted back into a normal **Chick (C)**.
+- A player wins by:
+  - capturing the opponent’s Lion, or
+  - moving their Lion safely to the opponent’s end row without being capturable on the next turn.
+- The game can be terminated at any time by entering `exit`.
+
 ## LLM Part
 - 기물 이동 가능 여부 코드 판단
 - Move, Drop 버그 고치기

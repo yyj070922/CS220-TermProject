@@ -1,5 +1,6 @@
 # CS220-TermProject
 A command-line Dobutsu Shogi built with **F# / .NET 10**.
+The project is implemented in a modular functional programming style using F# and .NET 10.
 
 You play as **RED** against a AI enemy, **BLUE**. Enter a command(Move/Drop) to choose your action.
 
@@ -93,6 +94,7 @@ Dobutsu Shogi
 9. If the action is valid, the board is updated.
 10. Captured pieces are added to the current player’s hand.
 11. The turn changes to the other player.
+    - Invalid inputs and illegal actions are automatically rejected with retry prompts.
 12. The game ends when:
     - a player captures the opponent’s Lion, or
     - a player moves their Lion to the opposite end of the board without risk of being captured.
@@ -111,6 +113,7 @@ Dobutsu Shogi
 
 - When a **Chick (C)** reaches the opponent's end row, it is automatically promoted to a **Hen (H)**.
 - A promoted **Hen (H)** returns to a normal **Chick (C)** when captured by the opponent.
+- Promotion and demotion are handled automatically during gameplay.
 
 ### GameOption
 
@@ -123,8 +126,8 @@ Depending on the selected game option, the gameplay proceeds as follows.
 
 | Result | Condition |
 |--------|-----------|
-| **Red wins** | The opponent's Lion is captured, or Red's Lion safely reaches the enemy side |
-| **Blue wins** | The opponent's Lion is captured, or Blue's Lion safely reaches the enemy side |
+| **Red wins** | The opponent's Lion is captured, or Red's Lion safely reaches the opponent’s back row |
+| **Blue wins** | The opponent's Lion is captured, or Blue's Lion safely reaches the opponent’s back row |
 | **Game terminated** | A player enters `exit` during the game |
 
 ## Example Session
@@ -203,6 +206,10 @@ type BoardState = {
 }
 ```
 
+## AI Features
+
+- The AI uses a depth-2 search strategy to evaluate possible future moves and select actions based on heuristic scoring.
+
 ## Rules Summary
 
 - The game is played on a **3×4 board** between **Red** and **Blue**.
@@ -216,6 +223,7 @@ type BoardState = {
   - `Drop` — place a captured piece from their hand onto an empty square
 - Captured pieces are added to the capturer’s hand and can later be dropped back onto the board.
 - A **Chick (C)** is automatically promoted to a **Hen (H)** when it reaches the opponent’s end row.
+- Captured pieces immediately change ownership and become reusable by the capturing player.
 - A captured **Hen (H)** is converted back into a normal **Chick (C)**.
 - A player wins by:
   - capturing the opponent’s Lion, or

@@ -231,7 +231,12 @@ type BoardState = {
 - The game can be terminated at any time by entering `exit`.
 
 ## LLM Usage
-- 기물 이동 가능 여부 코드 판단
-- Move, Drop 버그 고치기
-- 텍스트 색깔 입히기
-- AI depth 2 구현
+- Designing and debugging piece movement validation logic
+- Implementing and refining Move / Drop mechanics
+- Detecting and fixing gameplay bugs
+- Improving board rendering and terminal UI output
+- Adding colored console text for better readability
+- Designing the depth-2 AI search algorithm
+- Refactoring repetitive game logic into helper functions
+- Verifying Dobutsu Shogi rule implementations
+- Reviewing README documentation and gameplay explanations
